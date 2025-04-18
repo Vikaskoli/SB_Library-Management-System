@@ -54,12 +54,9 @@ spring.datasource.password=your_password
 spring.jpa.hibernate.ddl-auto=update spring.jpa.show-sql=true
 
 Screenshots 
-![Home]([relative/path/to/image.png](https://github.com/Vikaskoli/SB_Library-Management-System/blob/main/library_mgt/screenshots/home.png
-))
+![Home](https://github.com/Vikaskoli/SB_Library-Management-System/blob/main/library_mgt/screenshots/home.png
+)
 
-![Alt text](relative/path/to/image.png)
-![Alt text](relative/path/to/image.png)
-![Alt text](relative/path/to/image.png)
-![Alt text](relative/path/to/image.png)
+
 
 
