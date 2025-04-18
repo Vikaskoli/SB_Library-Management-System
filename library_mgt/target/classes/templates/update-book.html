@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Update Book</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+<div th:insert="fragments/header :: header"></div>
+
+<div class="container my-4">
+    <div class="card">
+        <div class="card-body">
+            <form th:action="@{/save-update/{id}(id=${book.id})}" th:object="${book}" method="post">
+                <div class="row g-3">
+
+                    <!-- ISBN -->
+                    <div class="col-md-8">
+                        <label for="isbn" class="form-label">ISBN</label>
+                        <input type="text" th:field="*{isbn}" id="isbn" class="form-control" placeholder="ISBN">
+                    </div>
+
+                    <!-- Book Name -->
+                    <div class="col-md-8">
+                        <label for="name" class="form-label">Book Name</label>
+                        <input type="text" th:field="*{name}" id="name" class="form-control" placeholder="Book Name">
+                    </div>
+
+                    <!-- Description -->
+                    <div class="col-md-8">
+                        <label for="description" class="form-label">Book Description</label>
+                        <input type="text" th:field="*{description}" id="description" class="form-control" placeholder="Description">
+                    </div>
+
+                    <!-- Category Multi-Select -->
+                    <div class="col-md-8">
+                        <label for="categories" class="form-label">Categories</label>
+                        <select id="categories" th:field="*{categories}" multiple class="form-control">
+                            <option th:each="category : ${categories}"
+                                    th:value="${category.id}"
+                                    th:text="${category.name}">
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Author Multi-Select -->
+                    <div class="col-md-8">
+                        <label for="authors" class="form-label">Authors</label>
+                        <select id="authors" th:field="*{authors}" multiple class="form-control">
+                            <option th:each="author : ${authors}"
+                                    th:value="${author.id}"
+                                    th:text="${author.name}">
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Publisher Multi-Select -->
+                    <div class="col-md-8">
+                        <label for="publishers" class="form-label">Publishers</label>
+                        <select id="publishers" th:field="*{publishers}" multiple class="form-control">
+                            <option th:each="publisher : ${publishers}"
+                                    th:value="${publisher.id}"
+                                    th:text="${publisher.name}">
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
