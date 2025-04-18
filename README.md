@@ -57,6 +57,20 @@ Screenshots
 ![Home](https://github.com/Vikaskoli/SB_Library-Management-System/blob/main/library_mgt/screenshots/home.png
 )
 
+![Home](https://github.com/Vikaskoli/SB_Library-Management-System/blob/main/library_mgt/screenshots/viewBook-list.png
+)
+
+![Home](https://github.com/Vikaskoli/SB_Library-Management-System/blob/main/library_mgt/screenshots/publisher_Page.png
+)
+
+![Home](https://github.com/Vikaskoli/SB_Library-Management-System/blob/main/library_mgt/screenshots/view_BookDetails.png
+)
+
+![Home](https://github.com/Vikaskoli/SB_Library-Management-System/blob/main/library_mgt/screenshots/add-Author.png
+)
+
+
+
 
 
 
